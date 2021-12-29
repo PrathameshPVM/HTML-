@@ -1,1 +1,4 @@
 tr{text-align: center;}
+td{border: 1px dotted rgb(16, 20, 228);border-collapse: collapse;padding: 15px;}
+table{border-spacing: 5px;border: 1px solid pink;}
+th{background-color: gray;color: white;text-align: left;}
