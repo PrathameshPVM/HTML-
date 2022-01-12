@@ -1,0 +1,52 @@
+<!-- 1- wap to accept 2 numbers and display greatest number -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+            var n1, n2, res;
+            n1 = parseFloat(document.f1.a.value);
+            n2 = parseFloat(document.f1.b.value);
+            n3 = parseFloat(document.f1.c.value);
+
+            if (n1 < n2 && n1 < n3) {
+                res = n1;
+            } else if (n2 < n1 && n2 < n3) {
+                res = n2;
+
+            } else if (n3 < n1 && n3 < n2) {
+                res = n2;
+            } else {
+                alert("Invalid Operator")
+            }
+
+            document.getElementById("r1").innerHTML = res;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Smallest Number</h1>
+    <center>
+        <form name="f1" style="width: 50%;">
+            <fieldset>
+                <legend>Calculation</legend>
+                Enter First Number <input type="text" name="a">
+                <br><br> Enter Second Number <input type="text" name="b">
+                <br><br> Enter Third Number <input type="text" name="c">
+                <br><br>
+                <input type="button" value="Submit" onclick="msg();">
+                <br><br> Smaller Number : <span id="r1" name="result"></span>
+            </fieldset>
+        </form>
+    </center>
+
+</body>
+
+</html>
