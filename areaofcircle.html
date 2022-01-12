@@ -1,0 +1,38 @@
+<!-- wap to accept radius of a circle and then print area and circ of a circle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Circle</title>
+    <script>
+        function msg() {
+            var r, res;
+            r = document.f1.r.value;
+            res = 3.14 * r * r;
+
+            document.getElementById("result").innerHTML = res;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Area Of Circle</h1>
+    <center>
+        <fieldset>
+            <legend>Calculate</legend>
+            <form name="f1" width=50%>
+                Enter Radius <input type="text" name="r">
+                <br> <br>
+                <input type="button" value="Submit" onclick="msg();">
+            </form>
+            Area Of Circle = <span id="result" name="res"></span>
+        </fieldset>
+    </center>
+
+</body>
+
+</html>
