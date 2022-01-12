@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+            var age, res;
+            age = parseFloat(document.f1.a.value);
+
+            if (age <= 17) {
+                res = 'Not Elegible to Vote';
+            } else
+
+                res = 'Elegible to Vote'
+
+
+            document.getElementById("r1").innerHTML = res;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Elegibility</h1>
+    <center>
+        <form name="f1" style="width: 50%;">
+            <fieldset>
+                <legend>Age</legend>
+                Enter Your Age <input type="text" name="a">
+
+                <br><br>
+                <input type="button" value="Submit" onclick="msg();">
+                <br><br> You Are : <span id="r1" name="result"></span>
+            </fieldset>
+        </form>
+    </center>
+
+</body>
+
+</html>
