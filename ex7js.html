@@ -1,0 +1,63 @@
+<!-- 1- wap to accept 3 subject marks and display total, percentage and grade. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+            var n1, n2, n3, total, per, grade;
+            n1 = parseFloat(document.f1.a.value);
+            n2 = parseFloat(document.f1.b.value);
+            n3 = parseFloat(document.f1.c.value);
+
+            total = n1 + n2 + n3;
+            document.getElementById("r1").innerHTML = total;
+            per = (n1 + n2 + n3) / 300 * 100;
+            document.getElementById("r2").innerHTML = per;
+            if (per <= 36) {
+                Grade = 'F'
+            } else if (per <= 50) {
+                grade = 'D'
+            } else if (per <= 65) {
+                grade = 'C'
+            } else if (per <= 70) {
+                grade = 'B'
+            } else if (per <= 90) {
+                grade = 'A'
+            } else if (per <= 95) {
+                grade = 'A+'
+            } else {
+                alert("Invalid Input")
+            }
+
+            document.getElementById("r3").innerHTML = grade;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Enter Marks</h1>
+    <center>
+        <form name="f1" style="width: 50%;">
+            <fieldset>
+                <legend>Calculation</legend>
+                Physics <input type="text" name="a">
+                <br><br> Chemistry <input type="text" name="b">
+                <br><br> Maths <input type="text" name="c">
+                <br><br>
+                <input type="button" value="Submit" onclick="msg();">
+                <br><br> Total : <span id="r1" name="result"></span>
+                <br><br> Percentage : <span id="r2" name="result"></span>
+                <br><br> Grade : <span id="r3" name="result"></span>
+            </fieldset>
+        </form>
+    </center>
+
+</body>
+
+</html>
